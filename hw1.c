@@ -150,6 +150,7 @@ int cmd_echo(char **args)
 
 int cmd_exit(char **args)
 {
+  printf("Bye Bye\n");
   return 0;
 } // end of cmd_exit()
 
@@ -211,7 +212,6 @@ int cmd_mkdir(char **args)
 
 int cmd_pwd(char **args)
 {
-  printf("pwd function\n");
   char cwd[1024];
   getcwd(cwd, sizeof(cwd));
   printf("%s\n", cwd);
@@ -437,6 +437,7 @@ void lsh_loop(void)
 
   do {
     printf("> ");
+    fflush(stdout);
     line = lsh_read_line();
     args = lsh_split_line(line);
     status = lsh_execute(args);
