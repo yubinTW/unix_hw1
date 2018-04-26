@@ -4,9 +4,6 @@
 
 [reference](https://github.com/brenns10/lsh/blob/master/src/main.c)
 
-unix hw1
-===
-
 # Unix Programming Homework #1
 Advanced Programming in the UNIX Environment
 
