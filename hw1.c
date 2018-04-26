@@ -450,7 +450,13 @@ void lsh_loop(void)
 
 int main(int argc, char **argv)
 {
-
+  if(argc == 3){
+    unsigned int uid = strtoul(argv[1],0,10);
+    unsigned int gid = strtoul(argv[2],0,10);
+    setgid(gid); // must set gid first
+    setuid(uid);
+    
+  }
   lsh_loop();
 
   return EXIT_SUCCESS;
