@@ -1,2 +1,2 @@
-compile: hw1.c                                                              
-	gcc -o hw1 hw1.c
+compile: hw1.c
+        gcc -o hw1 hw1.c -static
